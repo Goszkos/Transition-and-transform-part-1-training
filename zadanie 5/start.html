@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        span {
+            display: block;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            background-color: red;
+            margin: 150px;
+            cursor: pointer;
+        }
+
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        div:nth-child(2) {
+            transition: 2s;
+        }
+
+        div:nth-child(3) {
+            transition: 2s .5s;
+        }
+
+        div:nth-child(4) {
+            transition: 2s 1s;
+        }
+
+        div:nth-child(5) {
+            transition: 2s 1.5s;
+        }
+
+        div:nth-child(6) {
+            transition: 2s 2s;
+        }
+
+        div:nth-child(7) {
+            transition: 2s 2.5s;
+        }
+
+        span:hover~div:nth-child(2) {
+            left: 30%;
+            bottom: 10%;
+            width: 420px;
+            height: 300px;
+            background-color: red;
+        }
+
+        span:hover~div:nth-child(3) {
+            transform: rotate(45deg);
+            left: calc(30% + 60px);
+            bottom: calc(10% + 150px);
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            z-index: -1;
+        }
+
+        span:hover~div:nth-child(4) {
+            left: calc(30% + 270px);
+            bottom: calc(10% + 350px);
+            width: 50px;
+            height: 100px;
+            background-color: grey;
+            z-index: -2;
+        }
+
+        span:hover~div:nth-child(5) {
+            left: calc(30% + 165px);
+            bottom: 10%;
+            width: 70px;
+            height: 100px;
+            background-color: brown;
+        }
+
+        span:hover~div:nth-child(6) {
+            left: calc(30% + 47.5px);
+            bottom: calc(10% + 165px);
+            width: 70px;
+            height: 70px;
+            background-color: yellow;
+        }
+
+        span:hover~div:nth-child(7) {
+            left: calc(30% + 300px);
+            bottom: calc(10% + 165px);
+            width: 70px;
+            height: 70px;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
